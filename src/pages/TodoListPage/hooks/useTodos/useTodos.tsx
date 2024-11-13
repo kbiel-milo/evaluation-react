@@ -1,3 +1,4 @@
+
 interface TodosResponse {
   // Endpoint: https://dummyjson.com/todos?limit=10
   todos: {
@@ -24,9 +25,9 @@ interface UseTodosReturn {
 //
 // Requirements:
 // 1. Hook should fetch todos data
-// 2. Hook should support `limit` parameter to define the number of todos returned
-// 3. Hook should track loading state
-// 4. Hook should handle error state. It can be a simple string with an error message, no matter the cause.
+// 2. Hook should track loading state
+// 3. Hook should handle error state. It can be a simple string with an error message, no matter the cause.
+// 4. If time allows, hook should support `limit` parameter to define the number of todos returned
 export default function useTodos(): UseTodosReturn {
   return {
     data: undefined,
