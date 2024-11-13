@@ -11,6 +11,12 @@ interface TodosResponse {
   limit: number; // defines the number of todos returned
 }
 
+interface UseTodosReturn {
+  data: TodosResponse | undefined;
+  isLoading: boolean;  
+  error: string | undefined;
+}
+
 // TODO: Implement this hook to fetch todos from the API
 //
 // Use the following URL to fetch the todos:
@@ -21,6 +27,10 @@ interface TodosResponse {
 // 2. Hook should support `limit` parameter to define the number of todos returned
 // 3. Hook should track loading state
 // 4. Hook should handle error state. It can be a simple string with an error message, no matter the cause.
-export default function useTodos() {
-  return null;
+export default function useTodos(): UseTodosReturn {
+  return {
+    data: undefined,
+    isLoading: false,
+    error: undefined,
+  };
 }
